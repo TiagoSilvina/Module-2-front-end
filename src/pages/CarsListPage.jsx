@@ -22,11 +22,11 @@ function CarsListPage(){
 
 ////////////////////////////////////////////////////////////////////
     return(
-    <div>
+    <div className="car-container">
       {cars && cars.map((car)=>{
 
         return (
-          <div className="car-container">
+          <div >
           <Link to={`/cars/${car.id}`}>
           <div className="car-data" key={car.id}>
             

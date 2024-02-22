@@ -26,7 +26,7 @@
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  position: relative;
 }
 
 .footer-container *{
@@ -49,7 +49,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image:  url("../src/assets/img/redMg.jpeg");
+  background-image:  url("../public/assets/img/redMg.jpeg");
   background-size: cover;
   background-position: 0%;
 }
@@ -82,7 +82,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image:  url("../src/assets/img/911.jpeg");
+  background-image:  url("../public/assets/img/911.jpeg");
   background-size: cover;
   background-position: 0%;
 }
@@ -97,7 +97,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image:  url("../src/assets/img/lost.jpeg");
+  background-image:  url("../public/assets/img/911.jpeg");
 }
 
 .not-found-page img{
@@ -109,7 +109,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image:  url("../src/assets/img/alpine.jpeg");
+  background-image:  url("../public/assets/img/buggyItaly.jpeg");
   background-size: contain;
  
 }
@@ -162,7 +162,7 @@ border-radius: 5px;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-image: url("../src/assets/img/ghia.jpeg");
+  background-image: url("../public/assets/img/ghia.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -182,7 +182,6 @@ border-radius: 5px;
   border: 0;
   border-radius: 100px;
   background-color: maroon;
-  color: white;
   font-weight: Bold;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
