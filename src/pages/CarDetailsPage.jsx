@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const API ="http://localhost:5000";
+const API ="https://module-2-back-end.onrender.com";;
 
 
 function CarDetailsPage(){
@@ -30,7 +30,7 @@ return(
     <div className="car-container">
     {car &&   
             <div className="car-data" key={car.id}>
-                <img url={car.imageUrl} alt="Car"/>
+                <img src={car.imageUrl} alt="Car"/>
                   <h3>{car.year} {car.brand} {car.model}</h3>
                   <p><b>KM: </b> {car.km}</p>
                   <p><b>Seller: </b> {car.user}</p>

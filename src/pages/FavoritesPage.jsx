@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const API ="http://localhost:5000";
+const API ="https://module-2-back-end.onrender.com";;
 
 
 function FavoritesPage(){
