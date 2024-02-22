@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 
-const API ="https://module-2-back-end.onrender.com";
+const API ="http://localhost:5000";
 
 function CarsListPage(){
     const [cars, setCars] = useState([]);
@@ -31,7 +31,7 @@ function CarsListPage(){
           <div className="car-data" key={car.id}>
             
                 <img url={car.imageUrl} alt="Car"/>
-                {/*<article className="car-data">*/}
+                
                   <h3>{car.year} {car.brand} {car.model}</h3>
                   <p><b>KM: </b> {car.km}</p>
                   <Link to="/bids">
@@ -44,7 +44,7 @@ function CarsListPage(){
                   <Link to={`/cars/${car.id}`}>
                   <button style={{ display: car.user === "private" ? 'none' : 'inline-block' }}>View Your Listing</button>
                   </Link>
-                {/*</article>*/}
+                
           </div>
           </Link>
           </div>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const API ="https://module-2-back-end.onrender.com";
+const API ="http://localhost:5000";
 
 
 function CarDetailsPage(){
@@ -36,10 +36,6 @@ return(
                   <p><b>Seller: </b> {car.user}</p>
                   <Link to="/bids">
                   <button style={{ display: car.user !== "private" ? 'none' : 'inline-block' }}>Place bid</button>
-                  </Link>
-{/* link below not working only redirects*/}
-                  <Link to="/favorites">
-                    <button style={{ display: car.user !== "private" ? 'none' : 'inline-block' }}>Add to Favorites</button>
                   </Link>
                   <button onClick={deleteCar} style={{ display: car.user === "private" ? 'none' : 'inline-block' }}>Remove Listing</button>
             </div>

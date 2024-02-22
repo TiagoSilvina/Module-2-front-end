@@ -15,6 +15,8 @@ import CarsListPage from './pages/CarsListPage';
 import EditCarPage from './pages/EditCarPage';
 import BidsPage from './pages/BidsPage';
 import FavoritesPage from './pages/FavoritesPage';
+import SearchPage from './pages/SearchPage';
+
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
           <Route path="/edit-car/:id" element={<EditCarPage />} />
           <Route path="/bids" element={<BidsPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       <Footer/>

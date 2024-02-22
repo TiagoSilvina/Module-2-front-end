@@ -1,42 +1,36 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const API ="https://module-2-back-end.onrender.com";
+const API ="http://localhost:5000";
 
 function HomePage({setResults}){
 
-    const[input, setInput]= useState("");
+    const navigate = useNavigate()
 
-    const fetchData =(value)=>{
-        fetch(API)
-        .then((response)=> response.json())
-        .then((json)=>{
-        const results = json.filter((cars)=> {
-            return(
-            value &&
-            cars &&
-            cars.brand &&
-            cars.brand.toLowerCase().includes(value)
-        );
-        });
-        setResults(results);
-    })
-    };
+    const [search, setSearch] = useState("")
 
-    const handleChange = (value)=>{
-        setInput(value);
-        fetchData(value);
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        navigate({ pathname: "/search", search: `?searchedCars=${search}` })
+        setSearch("")
     }
 
     return(
-        <article className="homepage">
+        <div className="homepage">
+
         <div className="homepage-container">
         <h1 className="homepage-text">Classic Car Auctions</h1>
         <h3 className="homepage-text">Find your dream classic car!</h3>
         </div>
-        <input placeholder="Search..."
-                value={input}
-                onChange={(e)=>handleChange(e.target.value)} /> 
-        </article>
+
+        <form onSubmit={handleSubmit}> 
+        <input  type='text' value={search}
+                placeholder="Search..."
+                onChange={(e) => setSearch(e.target.value)}></input>
+        <button type="submit">Search</button>
+        </form>
+
+        </div>
     )
 }
 export default HomePage
