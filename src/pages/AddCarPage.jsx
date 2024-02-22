@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 
-const API ="https://module-2-back-end.onrender.com";;
+const API ="https://module-2-back-end.onrender.com";
 
 function AddCarPage(){
     
@@ -12,7 +12,8 @@ function AddCarPage(){
     const [brand, setBrand] = useState("");
     const [model, setModel] = useState("");
     const [km, setKm] = useState("");
-    const [imageUrl, setImg] = useState("");
+    const [imgUrl, setImg] = useState("");
+    const [price, setPrice] = useState("");
     const [user, setUser] = useState("");
     const navigate = useNavigate();
 
@@ -23,10 +24,10 @@ function handleSubmit(e){
             year,
             brand,
             model,
-            imageUrl,
+            imgUrl,
             km,
+            price,
             user,
-            favorite
         };
 
     axios.post(`${API}/cars`, car)
@@ -35,6 +36,7 @@ function handleSubmit(e){
     }
     
     return(
+        <div>
         <form className="car-form" onSubmit={handleSubmit}>
 
             <input value = {year} name="year" type="number" placeholder="Year"
@@ -51,15 +53,21 @@ function handleSubmit(e){
             min="0" max="1000000"
             required onChange={(e)=> setKm(e.target.value)}/>
 
-            <input value = {imageUrl} name="img" type="text" placeholder="Image Url"
+            <input value = {imgUrl} name="img" type="text" placeholder="Image Url"
             required onChange={(e)=> setImg(e.target.value)}/>
 
             <input value = {user} name="user" type="text" placeholder="User"
             required onChange={(e)=> setUser(e.target.value)}/>
 
+            <input value = {price} name="price" type="number" placeholder="Asking Price"
+            min="0"
+            required onChange={(e)=> setPrice(e.target.value)}/>
+
             <button type='submit'>Add Car</button>
-            <Link to="/cars"><button className="back2listing">Back to Listing</button></Link>
         </form>
+            <Link to="/cars"><button className="back2listing">Back to Listing</button></Link>
+            </div>
+
     )
 }
 

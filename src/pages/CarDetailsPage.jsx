@@ -19,25 +19,38 @@ function CarDetailsPage(){
             .catch((error)=>console.log(error))
         },[]);
 
-    function deleteCar(){
-        
+    function deleteCar(){     
         axios
             .delete(`${API}/cars/${id}`, car)
             .then(() => { navigate("/cars");})
             .catch((error) => console.log(error));
             };
+
+            function editCar() {
+                axios
+                  .get(`${API}/cars/${id}`)
+                  .then(() => {
+                    navigate(`/edit-car/${id}`);
+                  })
+                  .catch((error) => console.log(error));
+              }
+
 return(
-    <div className="car-container">
+    <div className="car-container" key={car.id}>
     {car &&   
-            <div className="car-data" key={car.id}>
-                <img src={car.imageUrl} alt="Car"/>
+            <div className="car-data" >
+                <img src={car.imgUrl} alt="Car"/>
                   <h3>{car.year} {car.brand} {car.model}</h3>
                   <p><b>KM: </b> {car.km}</p>
+                  <p><b>Asking Price: </b> {car.price}</p>
                   <p><b>Seller: </b> {car.user}</p>
                   <Link to="/bids">
                   <button style={{ display: car.user !== "private" ? 'none' : 'inline-block' }}>Place bid</button>
                   </Link>
                   <button onClick={deleteCar} style={{ display: car.user === "private" ? 'none' : 'inline-block' }}>Remove Listing</button>
+                  <Link to="/">
+                  <button onClick={editCar} style={{ display: car.user === "private" ? 'none' : 'inline-block' }}>Edit Listing</button>
+                  </Link>
             </div>
     }
     </div>
