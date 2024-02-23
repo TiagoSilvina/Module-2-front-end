@@ -28,9 +28,9 @@ function EditCarPage(){
               setBrand(oneCar.brand);
               setModel(oneCar.model);
               setKm(oneCar.km);
-              setImg(oneCar.km);
+              setImg(oneCar.imgUrl);
               setPrice(oneCar.price);
-              setUser(oneCar.price);
+              setUser(oneCar.user);
            })
            .catch((error)=> console.log(error))
     }, [id])
@@ -65,30 +65,36 @@ function deleteCar(){
     return(
         <div>
         <div className="banner-home">
-        <h1 className="slogan-home">Sell your car</h1>
+        <h1 className="slogan-home">Edit your Listing</h1>
     </div>
     <form className="car-form" onSubmit={handleSubmit}>
-
+        <label>Year:</label>
         <input className="car-input" value = {year} name="year" type="number" placeholder=" Year"
         min="1965" max="2000" 
          onChange={(e)=> setYear(e.target.value)}/>
-
+        
+        <label>Brand:</label>
         <input className="car-input" value = {brand} name="brand" type="text" placeholder=" Brand"
          onChange={(e)=> setBrand(e.target.value)}/>
-
+        
+        <label>Model:</label>
         <input className="car-input" value = {model} name="model" type="text" placeholder=" Model"
          onChange={(e)=> setModel(e.target.value)}/>
-
+    
+        <label>Km:</label>
         <input className="car-input" value = {km} name="km" type="number" placeholder=" Km"
         min="0" max="1000000"
          onChange={(e)=> setKm(e.target.value)}/>
-
+        
+        <label>Picture URL:</label>
         <input className="car-input" value = {imgUrl} name="img" type="text" placeholder=" Image Url"
          onChange={(e)=> setImg(e.target.value)}/>
-
+        
+        <label>User:</label>
         <input className="car-input" value = {user} name="user" type="text" placeholder=" User"
          onChange={(e)=> setUser(e.target.value)}/>
-
+        
+        <label>Asking Price:</label>
         <input className="car-input" value = {price} name="price" type="number" placeholder=" Asking Price"
         min="0"
          onChange={(e)=> setPrice(e.target.value)}/>
