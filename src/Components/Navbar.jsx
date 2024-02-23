@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -15,21 +15,23 @@ function Navbar() {
         setSearch("")}
 
     return (
-        <nav className="navbar">
-            <NavLink to="/"><h3>Home </h3></NavLink>
-            <NavLink to="/about"><h3> About</h3></NavLink>
-            <NavLink to="/cars"><h3> Buy</h3></NavLink>
-            <NavLink to="/add-car"><h3> Sell</h3></NavLink>
-            <div className="nav-search-bar">
+        <div className="header">
+            <Link to="/" className="logo">Classic Cars Club</Link>
+        <div className="navbar">
+            <Link className="navbar-item" to="/about"><h3> About</h3></Link>
+            <Link className="navbar-item" to="/cars"><h3> Buy</h3></Link>
+            <Link className="navbar-item" to="/add-car"><h3> Sell</h3></Link>
+            <div className="search-container">
                 <form onSubmit={handleSubmit}> 
-                <input  type='text' value={search}
+                <input className="search-bar" type='text' value={search}
                         placeholder="Search..."
                         onChange={(e) => setSearch(e.target.value)}>
                 </input>
-                <button type="submit">Find your dream car</button>
+                <button className="nav-button" type="submit">Search</button>
                 </form>
             </div>
-        </nav>
+        </div>
+        </div>
     );
 }
 export default Navbar;

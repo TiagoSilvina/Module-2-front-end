@@ -21,18 +21,18 @@ function CarsListPage(){
         return (
           <div >
           <Link to={`/cars/${car.id}`}>
-          <div className="car-data" key={car.id}>
-          <img src={car.imgUrl} alt="Car"/>
-                  <h3>{car.year} {car.brand} {car.model}</h3>
-                  <p><b>KM: </b> {car.km}</p>
-                  <p><b>Asking Price: </b> {car.price}</p>
-                  <p><b>Seller: </b> {car.user}</p>
-                  <Link to="/bids">
-                  <button style={{ display: car.user !== "private" ? 'none' : 'inline-block' }}>Place bid</button>
+          <div className="card" key={car.id}>
+          <img className="card-img" src={car.imgUrl} alt="Car"/>
+            <div className="card-title"><h3>{car.year} {car.brand} {car.model}</h3></div>
+            <div className="card-text"><p><b>KM: </b> {car.km}</p>
+            <p><b>Asking Price: </b> {car.price}</p></div>
+                  <div className="card-btn"><Link to="/bids">
+                  <button className="card-btn"  style={{ display: car.user !== "private" ? 'none' : 'inline-block' }}>Place bid</button>
+                  </Link></div>
+                  <div className="card-btn"><Link to={`/cars/${car.id}`}>
+                  <button className="card-btn" style={{ display: car.user === "private" ? 'none' : 'inline-block' }}>View Your Listing</button>
                   </Link>
-                  <Link to={`/cars/${car.id}`}>
-                  <button style={{ display: car.user === "private" ? 'none' : 'inline-block' }}>View Your Listing</button>
-                  </Link>
+            </div>
           </div>
           </Link>
           </div>
@@ -41,4 +41,4 @@ function CarsListPage(){
     </div>)
 }
 
-export default CarsListPage
+export default CarsListPage;

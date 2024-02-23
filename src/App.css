@@ -1,217 +1,307 @@
 /*/////////////////////////////////////////////////////////////////////////////*/
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: tan;
-}
-
-.navbar {
-  background-color: maroon;
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.navbar h3{
-  background-color: maroon;
-  color: white;
-  padding: 10px;
-}
-
-.footer-container {
-  background-color: maroon;
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-}
-
-.footer-container *{
-  background-color: maroon;
-  color: white;
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-a{
   text-decoration: none;
-}
-/*/////////////////////////////////////////////////////////////////////////////*/
-
-.homepage{
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image:  url("/assets/img/redMg.jpeg");
-  background-size: cover;
-  background-position: 0%;
+  font-family: "Poppins";
 }
 
-.homepage-text{
-  background-color: transparent;
+a{  text-decoration: none;
+  text-transform: none;
   color: white;
 }
 
-.homepage img{
-  max-height: 80vh;
-}
+/* NAV BAR /////////////////////////////////////////////////////////////////////////////*/
 
-.homepage input{
-  color:white;
-  border: 5px solid black;
-  border-radius: 30px;
-  font-size: 3em;
-  padding: 30px;
-  width: 60%;
-  margin: auto;
+.header{
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 10vh;
+  padding: 40px;
+  justify-content: space-between;
   align-items: center;
-  min-width: 200px;
-}
-
-.about-page{
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image:  url("/assets/img/911.jpeg");
-  background-size: cover;
-  background-position: 0%;
-}
-
-.developer-card{
-
-
-}
-
-.not-found-page{
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image:  url("/assets/img/911.jpeg");
-}
-
-.not-found-page img{
-  min-height: 80vh;
-}
-
-.bids-page{
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image:  url("/assets/img/buggyItaly.jpeg");
-  background-size: contain;
- 
-}
-
-.favorites-page{
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/*/////////////////////////////////////////////////////////////////////////////*/
-
-.car-container{
-min-height: 80vh;
-width: 100%;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-justify-items: center;
-border: 3px solid black;
-height:100px
-}
-
-.car-data{
-padding-top: 10px;
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-
-.car-data button{
-padding: 10px;
-background: maroon;
-color: white;
-width: 100%;
-border-radius: 5px;
-}
-.car-data img{
-  height: 300px;
-  width: auto;
-  border: 5px solid black;
-}
-
-.car-form {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-image: url("/assets/img/ghia.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  background-color: black;
+  color: white;
   
 }
 
-.car-form label{
-  font-size: 20px;
-  font-weight: 600;
-  color: #ffffff;
+.logo{
   display: flex;
-  justify-content: start;
-}
-
-.car-form button{
-  padding: 12.5px 30px;
-  border: 0;
-  border-radius: 100px;
-  background-color: maroon;
-  font-weight: Bold;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-}
-
-.car-form input{
-  padding-left: 10px ;
-  width: 600px;
-  height: 50px;
+  justify-content: center;
+  align-items: center;
   color: white;
-  background-color: none;
-}
-.car-form button:hover{
-  background-color: #F2AB2D;
-  transform: scale(1.1);
-  color: #002922;
+  font-size: 32px;
+  font-family: "Abril Fatface"
 }
 
-.car-form button:active{
-  background-color: #F35200;
-  transition: all 0.25s;
-  color:#F1DBAE;
-  -webkit-transition: all 0.25s;
- 
-  transform: scale(0.98);
-  cursor: pointer;
+.navbar {
+  width: ;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 64px;
+}
+
+.navbar-item{
+  text-align: right;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.search-container{
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-bar{
+  display: flex;
+  width: 300px;
+  height: 48px;
+  padding: 8px 16px;
+  align-items: center;
+
+}
+
+.nav-button{
+  width: 300px;
+  height: 31px;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* BANNER /////////////////////////////////////////////////////////////////////////////*/
+
+.banner-home{
+  width: 100%;
+  height: 20vh;
+  flex-shrink: 0;
+  background-image: url("/assets/img/dashboard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.slogan-home{
+  color: white;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  width: fit-content;
+  margin-left: 10%;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* ABOUT PAGE /////////////////////////////////////////////////////////////////////////////*/
+
+.about-page{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.developer-card{
+  position: relative;
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  margin: 40px;
+  background-color: white;
+  padding:40px;
+}
+
+.profile-pic{
+  height: 100px;
+  width: auto;
+}
+
+.dev-name{
+  margin: 30px 0px 10px 0px;
+  font-weight: 500;
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+
+.dev-link{
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  color: black
+}
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* ADD CAR PAGE /////////////////////////////////////////////////////////////////////////////*/
+
+.car-form {
+  margin-top: 150px;
+  min-height: 80vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.car-input{
+  width: 80%;
+  color: black;
+  font-size: 40px;
+  border-radius: 20px;
+}
+
+.car-input-btn{
+  height: 5vh;
+  width: 80%;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center
 }
 /*/////////////////////////////////////////////////////////////////////////////*/
 
-.back2listing {
- text-align: center;
+/* CAR BIDS PAGE /////////////////////////////////////////////////////////////////////////////*/
+
+.lost{
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
 }
+
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* CAR LIST PAGE /////////////////////////////////////////////////////////////////////////////*/
+
+.car-container{
+  margin: 75px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  position: relative;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background-color: lightgray;
+  margin: 8px ;
+  color: black;
+}
+
+.card-img{
+  width: 400px; 
+  height: 250px; 
+  border-radius: 20px;
+}
+
+.card-title{
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center
+}
+
+.card-text{
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+
+/*.card-price{
+  text-align: start;
+  margin-bottom: 10px;
+}*/
+
+.card-btn{
+  width: 300px;
+  height: 31px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* CAR DETAILS /////////////////////////////////////////////////////////////////////////////*/
+.car-details-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
+  margin-top: 150px;
+}
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* EDIT CAR PAGE /////////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* HOME PAGE /////////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* NOT FOUND PAGE /////////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* SEARCH PAGE /////////////////////////////////////////////////////////////////////////////*/
+
+.search-car-container{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 225px;
+  margin-top: 225px;
+  flex-wrap: wrap;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/* FOOTER /////////////////////////////////////////////////////////////////////////////*/
+
+.footer{
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 30px;
+}
+
+.footer-title{
+  font-family: "Abril Fatface"
+}
+
+/*/////////////////////////////////////////////////////////////////////////////*/

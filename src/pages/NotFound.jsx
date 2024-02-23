@@ -2,13 +2,12 @@ import { Link } from 'react-router-dom';
 
 function NotFound(){
     return(
-        <div className="not-found-page">
-            
-            <h1>You took a wrong turn</h1>
-            <p>Page not found</p>
-            <Link to="/"><button>Back to Home Page</button></Link>
-            
-        </div>
+        <div>
+        <div className="banner-home">
+           <h1 className="slogan-home">Page Not Found</h1>
+       </div>
+       <div className="lost"><img src="/assets/img/lost.jpeg"/></div>
+    </div>
     )
 }
 export default NotFound;

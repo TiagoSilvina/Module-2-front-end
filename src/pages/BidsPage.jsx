@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom"
-
 function BidsPage(){
     return(
-        <article className="bids-page">
-        <h1>Biddings currently closed</h1>
-        <Link to="/"><button>Back to Home Page</button></Link>
-        </article>
+     <div>
+         <div className="banner-home">
+            <h1 className="slogan-home">Our services are unavaliable</h1>
+        </div>
+        <div className="lost"><img src="/assets/img/lost.jpeg"/></div>
+     </div>
     )
 }
 export default BidsPage

@@ -37,36 +37,39 @@ function handleSubmit(e){
     
     return(
         <div>
+            <div className="banner-home">
+            <h1 className="slogan-home">Sell you car</h1>
+        </div>
         <form className="car-form" onSubmit={handleSubmit}>
 
-            <input value = {year} name="year" type="number" placeholder="Year"
+            <input className="car-input" value = {year} name="year" type="number" placeholder=" Year"
             min="1965" max="2000" 
             required onChange={(e)=> setYear(e.target.value)}/>
 
-            <input value = {brand} name="brand" type="text" placeholder="Brand"
+            <input className="car-input" value = {brand} name="brand" type="text" placeholder=" Brand"
             required onChange={(e)=> setBrand(e.target.value)}/>
 
-            <input value = {model} name="model" type="text" placeholder="Model"
+            <input className="car-input" value = {model} name="model" type="text" placeholder=" Model"
             required onChange={(e)=> setModel(e.target.value)}/>
 
-            <input value = {km} name="km" type="number" placeholder="Km"
+            <input className="car-input" value = {km} name="km" type="number" placeholder=" Km"
             min="0" max="1000000"
             required onChange={(e)=> setKm(e.target.value)}/>
 
-            <input value = {imgUrl} name="img" type="text" placeholder="Image Url"
+            <input className="car-input" value = {imgUrl} name="img" type="text" placeholder=" Image Url"
             required onChange={(e)=> setImg(e.target.value)}/>
 
-            <input value = {user} name="user" type="text" placeholder="User"
+            <input className="car-input" value = {user} name="user" type="text" placeholder=" User"
             required onChange={(e)=> setUser(e.target.value)}/>
 
-            <input value = {price} name="price" type="number" placeholder="Asking Price"
+            <input className="car-input" value = {price} name="price" type="number" placeholder=" Asking Price"
             min="0"
             required onChange={(e)=> setPrice(e.target.value)}/>
 
-            <button type='submit'>Add Car</button>
+            <button className="car-input-btn" type='submit'>Add Car</button>
         </form>
-            <Link to="/cars"><button className="back2listing">Back to Listing</button></Link>
-            </div>
+        </div>
+           
 
     )
 }

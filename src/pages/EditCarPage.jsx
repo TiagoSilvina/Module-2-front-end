@@ -21,12 +21,13 @@ function EditCarPage(){
     useEffect(()=>{
 
         axios.get(`${API}/cars/${id}`).then((response)=>{
-              setYear(response.data.year);
-              setBrand(response.data.brand);
-              setModel(response.data.model);
-              setColor(response.data.color);
-              setKm(response.data.km);
-              setPrice(response.data.price);
+              setYear(response.car.year);
+              setBrand(response.car.brand);
+              setModel(response.car.model);
+              setKm(response.car.km);
+              setImg(response.car.km);
+              setPrice(response.car.price);
+              setUser(response.car.price);
            
         }).catch((error)=> console.log(error))
     }, [])
@@ -45,9 +46,9 @@ function handleSubmit(e){
         user
     };
 
-    axios.put(`${API}/cars/${id}`, data)
-         .then(()=>{ navigate("/cars");})
-         .catch((error)=>{console.log(error)})
+    axios.put(`${API}/cars/${id}`, car)
+    .then(() => { navigate("/cars"); })
+    .catch((error) => console.log(error));
     }
 
 function deleteCar(){
@@ -59,32 +60,36 @@ function deleteCar(){
 
     return(
         <div>
-        <form className="car-form" onSubmit={handleSubmit}>
+        <div className="banner-home">
+        <h1 className="slogan-home">Sell you car</h1>
+    </div>
+    <form className="car-form" onSubmit={handleSubmit}>
 
-            <input value = {year} name="year" type="number" placeholder="Year"
-            min="1965" max="2000"  
-            required onChange={(e)=> setYear(e.target.value)}/>
+        <input className="car-input" value = {year} name="year" type="number" placeholder=" Year"
+        min="1965" max="2000" 
+        required onChange={(e)=> setYear(e.target.value)}/>
 
-            <input value = {brand} name="brand" type="text" placeholder="Brand" 
-            required onChange={(e)=> setBrand(e.target.value)}/>
+        <input className="car-input" value = {brand} name="brand" type="text" placeholder=" Brand"
+        required onChange={(e)=> setBrand(e.target.value)}/>
 
-            <input value = {model} name="model" type="text" placeholder="Model"
-            required onChange={(e)=> setModel(e.target.value)}/>
+        <input className="car-input" value = {model} name="model" type="text" placeholder=" Model"
+        required onChange={(e)=> setModel(e.target.value)}/>
 
-            <input value = {km} name="km" type="number" placeholder="Km"
-            required onChange={(e)=> setKm(e.target.value)}/>
+        <input className="car-input" value = {km} name="km" type="number" placeholder=" Km"
+        min="0" max="1000000"
+        required onChange={(e)=> setKm(e.target.value)}/>
 
-            <input value = {imgUrl} name="img" type="text" placeholder="Image Url"
-            required onChange={(e)=> setImg(e.target.value)}/>
+        <input className="car-input" value = {imgUrl} name="img" type="text" placeholder=" Image Url"
+        required onChange={(e)=> setImg(e.target.value)}/>
 
-            <input value = {user} name="user" type="text" placeholder="User"
-            required onChange={(e)=> setUser(e.target.value)}/>
+        <input className="car-input" value = {user} name="user" type="text" placeholder=" User"
+        required onChange={(e)=> setUser(e.target.value)}/>
 
-            <input value = {price} name="price" type="number" placeholder="Asking Price"
-            min="0"
-            required onChange={(e)=> setPrice(e.target.value)}/>
+        <input className="car-input" value = {price} name="price" type="number" placeholder=" Asking Price"
+        min="0"
+        required onChange={(e)=> setPrice(e.target.value)}/>
 
-            <button type='submit'>Edit Listing</button>
+            <Link to="/cars"><button type='submit'>Edit Listing</button></Link>
         </form>
         <button onClick={deleteCar}>Remove Listing</button>
         </div>
