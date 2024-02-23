@@ -17,11 +17,10 @@ function CarsListPage(){
     return(
     <div className="car-container">
       {cars && cars.map((car)=>{
-
         return (
-          <div >
+          <div key={car.id}>
           <Link to={`/cars/${car.id}`}>
-          <div className="card" key={car.id}>
+          <div className="card" >
           <img className="card-img" src={car.imgUrl} alt="Car"/>
             <div className="card-title"><h3>{car.year} {car.brand} {car.model}</h3></div>
             <div className="card-text"><p><b>KM: </b> {car.km}</p>

@@ -38,7 +38,7 @@ a{  text-decoration: none;
 }
 
 .navbar {
-  width: ;
+  width:100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -152,12 +152,13 @@ a{  text-decoration: none;
 
 .car-form {
   margin-top: 150px;
-  min-height: 80vh;
+  min-height: 65vh;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .car-input{
@@ -261,6 +262,42 @@ a{  text-decoration: none;
 
 /* EDIT CAR PAGE /////////////////////////////////////////////////////////////////////////////*/
 
+.edit-form{
+  margin-top: 150px;
+  min-height: 75vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.del-container{
+  display: flex;
+  justify-content: center;
+}
+
+.edit-btn{
+  height: 5vh;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center
+}
+
+.del-btn{
+  height: 5vh;
+  width: 80%;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 100px;
+}
 /*/////////////////////////////////////////////////////////////////////////////*/
 
 /* HOME PAGE /////////////////////////////////////////////////////////////////////////////*/

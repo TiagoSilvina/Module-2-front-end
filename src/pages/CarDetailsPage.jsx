@@ -30,7 +30,7 @@ function CarDetailsPage(){
                 axios
                   .get(`${API}/cars/${id}`)
                   .then(() => {
-                    navigate(`/edit-car/${id}`);
+                    navigate(`/cars/edit/${id}`);
                   })
                   .catch((error) => console.log(error));
               }
