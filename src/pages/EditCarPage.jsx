@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const API = "https://module-2-back-end.onrender.com";
 
-function EditCarPage(props){
+function EditCarPage(){
 
     const [year, setYear] = useState("");
     const [brand, setBrand] = useState("");
@@ -35,19 +35,19 @@ function EditCarPage(props){
            .catch((error)=> console.log(error))
     }, [id])
 
-function handleSubmit(e){
-    e.preventDefault();
     const requestCar ={
         year,
         brand,
         model,
         imgUrl,
-        color,
         km,
         price,
         user
     };
 
+function handleSubmit(e){
+    e.preventDefault();
+ 
     axios
     .put(`${API}/cars/${id}`, requestCar)
     .then((response) => {
